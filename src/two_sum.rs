@@ -24,8 +24,8 @@ struct Container {
 }
 
 // time cost: 0ms
-// memory cost: 2.4MB on leetcode
-pub fn two_sum(mut nums: Vec<i32>, target: i32) -> Vec<i32> {
+// memory cost: 2.4MB
+pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut index = 0;
     let length = nums.len();
     if length == 2 {
@@ -56,7 +56,7 @@ pub fn two_sum(mut nums: Vec<i32>, target: i32) -> Vec<i32> {
                 }
                 return vec![result_index as i32, container.index as i32];
             },
-            Err(ignore) => continue
+            Err(_) => continue
         }
     }
     return vec![];

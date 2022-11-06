@@ -83,7 +83,7 @@ pub fn add_two_numbers(mut l1: Option<Box<ListNode>>,
             add = 0;
         }
         let next_node = ListNode::new(add_result);
-        let mut next_optional = Some(Box::new(next_node));
+        let next_optional = Some(Box::new(next_node));
         current.next = next_optional;
         current = current.next.as_mut().unwrap();
     }

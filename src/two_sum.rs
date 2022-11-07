@@ -43,7 +43,7 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     // O(nlogn)
     container_vec.sort_by(|a, b| a.num.partial_cmp(&b.num).unwrap());
 
-    // O(n)
+    // O(nlogn)
     for container in &container_vec {
         let sub = target - container.num;
         let search_result = container_vec.binary_search_by(|a| a.num.cmp(&sub));
